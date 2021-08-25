@@ -29,4 +29,9 @@ public class TestController {
         return ResponseEntity.ok(testEntityList);
     }
 
+    @GetMapping("/echo")
+    public ResponseEntity getOne() {
+        return ResponseEntity.ok("echo");
+    }
+
 }
