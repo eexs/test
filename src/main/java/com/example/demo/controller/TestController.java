@@ -31,7 +31,7 @@ public class TestController {
 
     @GetMapping("/echo")
     public ResponseEntity getOne() {
-        return ResponseEntity.ok("echo");
+        return ResponseEntity.ok("echo123");
     }
 
 }
