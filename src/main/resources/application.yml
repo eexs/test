@@ -1,0 +1,36 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+  messages:
+    encoding: utf-8
+  devtools:
+    restart:
+      enabled: false
+#  jackson:
+#    date-format: yyyy-MM-dd HH:mm:ss
+#    time-zone: GMT+8
+#  mvc:
+#    favicon:
+#      enabled: false
+
+spring:
+  application:
+    name: demo
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.18.101:30060/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    hikari:
+      minimum-idle: 20
+      maximum-pool-size: 100
+      idle-timeout: 300000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
